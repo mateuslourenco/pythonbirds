@@ -42,7 +42,6 @@ class AtorTestes(TestCase):
         self.assertEqual(0.3, x)
         self.assertEqual(0.5, y)
 
-
     def teste_colisao_entre_atores_ativos(self):
         """
         Teste de colisão entre dois atores
@@ -109,7 +108,6 @@ class AtorTestes(TestCase):
         ator.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual(' ', ator.caracter())
 
-
     def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
         """
         Se certifica que há colisão entre atores ativos
@@ -127,7 +125,7 @@ class AtorTestes(TestCase):
     def assert_nao_colisao(self, ator, ator2):
         """
         Se certifica que não colisão entre dois atores
-        Atenção: Esse não é método de teste porque nao se inicia com prefixo "text".
+        Atenção: Esse não é método de teste porque nao se inicia com prefixo "test".
         Ele apenas encapsula a lógica de não colisão entre dois atores.
         So seja, eles deve manter seus respectivos status mesmo depois da chamada do metodo colidir
         """
@@ -202,10 +200,8 @@ class PassaroVermelhoTests(PassaroBaseTests):
         passaro_vermelho.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('v', passaro_vermelho.caracter())
 
-
     def teste_velocidade_escalar(self):
         self.assertEqual(20, PassaroVermelho.velocidade_escalar)
-
 
     def teste_foi_lancado(self):
         """
